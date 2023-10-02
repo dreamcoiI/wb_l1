@@ -11,7 +11,7 @@ func main() {
 
 	numbers := [10]int{}
 	for i := 0; i < cap(numbers); i++ {
-		numbers[i] = i * i
+		numbers[i] = i
 	}
 
 	var wg sync.WaitGroup
