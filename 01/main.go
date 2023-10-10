@@ -7,7 +7,7 @@ type Human struct {
 	Pet  string
 }
 
-type Owner struct {
+type Action struct {
 	Name Human
 }
 
@@ -17,10 +17,10 @@ func (h *Human) bestPet() string {
 
 func main() {
 	owner := Human{Name: "Masha", Pet: "dog"}
-	animal := Owner{Name: owner}
+	animal := Action{Name: owner}
 	animal.petHuman()
 }
 
-func (a *Owner) petHuman() {
+func (a *Action) petHuman() {
 	fmt.Printf("%s the %s owner", a.Name.Name, a.Name.Pet)
 }
